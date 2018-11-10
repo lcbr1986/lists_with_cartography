@@ -1,0 +1,6 @@
+framework module Pods_lists_with_cartography {
+  umbrella header "Pods-lists_with_cartography-umbrella.h"
+
+  export *
+  module * { export * }
+}
