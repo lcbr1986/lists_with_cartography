@@ -30,7 +30,7 @@ class GistTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 12)
-        label.textAlignment = .left
+        label.textAlignment = .right
         return label
     }()
     
@@ -38,6 +38,8 @@ class GistTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16)
+        label.numberOfLines = 0
+        label.sizeToFit()
         label.textAlignment = .left
         return label
     }()
@@ -71,10 +73,23 @@ class GistTableViewCell: UITableViewCell {
         addSubview(userNameLabel)
         
         constrain(dateLabel, descriptionLabel, userNameLabel, userImageView) { dateLabel, descriptionLabel, userNameLabel, userImageView in
-            userNameLabel.width == 100
-            userNameLabel.height == 20
-            userNameLabel.left == userNameLabel.superview!.left + 10
+            userNameLabel.height == 30
             userNameLabel.top == userNameLabel.superview!.top + 10
+            userNameLabel.left == userNameLabel.superview!.left + 10
+            
+            userImageView.width == 45
+            userImageView.height == 45
+            userImageView.left == userNameLabel.left
+            userImageView.top == userNameLabel.bottom + 5
+            
+            dateLabel.height == 20
+            dateLabel.top == dateLabel.superview!.top + 10
+            dateLabel.right == dateLabel.superview!.right - 10
+            
+            descriptionLabel.top == dateLabel.bottom + 5
+            descriptionLabel.bottom == descriptionLabel.superview!.bottom + 5
+            descriptionLabel.left == userImageView.right + 10
+            descriptionLabel.right == descriptionLabel.superview!.right - 5
         }
     }
     
