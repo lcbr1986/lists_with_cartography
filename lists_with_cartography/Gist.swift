@@ -7,15 +7,26 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Gist {
-    var description: String?
-    var date: Date?
-    var ownerName: String?
-    var ownerAvatarUrl: String?
+class Gist: Object {
+    @objc dynamic var gistDescription: String?
+    @objc dynamic var date: Date?
+    @objc dynamic var ownerName: String?
+    @objc dynamic var ownerAvatarUrl: String?
+    @objc dynamic var gistId: String = ""
     
-    init(dict: [String: Any]) {
-        self.description = dict["description"] as? String
+    override static func primaryKey() -> String? {
+        return "gistId"
+    }
+    
+    convenience init?(dict: [String: Any]) {
+        self.init()
+        guard let gistId =  dict["id"] as? String else {
+            return nil
+        }
+        self.gistId = gistId
+        self.gistDescription = dict["description"] as? String
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -28,7 +39,4 @@ struct Gist {
         }
     }
     
-    init() {
-        
-    }
 }

@@ -20,8 +20,9 @@ class GistFetcher {
             do {
                 if let gistArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
                     for gistDict in gistArray {
-                        let gist = Gist(dict: gistDict)
-                        gists.append(gist)
+                        if let gist = Gist(dict: gistDict) {
+                            gists.append(gist)
+                        }
                     }
                 }
                 completionHandler(gists, error)

@@ -13,7 +13,7 @@ class GistTableViewCell: UITableViewCell {
     
     var gist: Gist? {
         didSet {
-            descriptionLabel.text = gist?.description
+            descriptionLabel.text = gist?.gistDescription
             userNameLabel.text = gist?.ownerName
             if let avatarUrl = gist?.ownerAvatarUrl {
                 userImageView.imageFromURL(urlString: avatarUrl)

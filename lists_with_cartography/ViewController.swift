@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 let cellId = "cell"
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     var gistFetcher = GistFetcher()
     var currentPage = 0
     var gistsToDisplay = [Gist]()
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +56,16 @@ class ViewController: UIViewController {
             }
             self?.gistsToDisplay.append(contentsOf: gists)
             DispatchQueue.main.async {
+                self?.storeGistsLocally(gists: gists)
                 self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    func storeGistsLocally(gists: [Gist]) {
+        for gist in gists {
+            try! realm.write {
+                realm.create(Gist.self, value: gist, update: true)
             }
         }
     }
