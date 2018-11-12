@@ -11,6 +11,7 @@
 		0893B0DC219761F20014E142 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0893B0DB219761F20014E142 /* ViewController.swift */; };
 		0893B0E1219761F40014E142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0E0219761F40014E142 /* Assets.xcassets */; };
 		0893B0E4219761F40014E142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0E2219761F40014E142 /* LaunchScreen.storyboard */; };
+		0893B0EC219774590014E142 /* GistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0893B0EB219774590014E142 /* GistTableViewCell.swift */; };
 		F639B2109AF06FFF9F2AE45C /* Pods_lists_with_cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E5376B14B1A009C0F4AD069 /* Pods_lists_with_cartography.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		0893B0E0219761F40014E142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0893B0E3219761F40014E142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0893B0E5219761F40014E142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0893B0EB219774590014E142 /* GistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistTableViewCell.swift; sourceTree = "<group>"; };
 		19470B8B2053D33EDAF2F04D /* Pods-lists_with_cartography.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lists_with_cartography.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lists_with_cartography/Pods-lists_with_cartography.debug.xcconfig"; sourceTree = "<group>"; };
 		4EBD1338A857B5A9B6EF6323 /* Pods-lists_with_cartography.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lists_with_cartography.release.xcconfig"; path = "Pods/Target Support Files/Pods-lists_with_cartography/Pods-lists_with_cartography.release.xcconfig"; sourceTree = "<group>"; };
 		7E5376B14B1A009C0F4AD069 /* Pods_lists_with_cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lists_with_cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 				0893B0E0219761F40014E142 /* Assets.xcassets */,
 				0893B0E2219761F40014E142 /* LaunchScreen.storyboard */,
 				0893B0E5219761F40014E142 /* Info.plist */,
+				0893B0EB219774590014E142 /* GistTableViewCell.swift */,
 			);
 			path = lists_with_cartography;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0893B0DC219761F20014E142 /* ViewController.swift in Sources */,
+				0893B0EC219774590014E142 /* GistTableViewCell.swift in Sources */,
 				0893B0DA219761F20014E142 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var tableView: UITableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Gists"
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         tableView.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         tableView.dataSource = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(GistTableViewCell.self, forCellReuseIdentifier: "cell")
         
         self.view.addSubview(tableView)
     }
@@ -41,7 +42,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GistTableViewCell
         
         cell.textLabel?.text = "item \(indexPath.row)"
         
