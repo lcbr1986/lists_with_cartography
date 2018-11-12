@@ -18,7 +18,7 @@ struct Gist {
         self.description = dict["description"] as? String
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         self.date = dateFormatter.date(from: (dict["created_at"] as? String)!)!
         if let owner = dict["owner"] as? [String: Any],
         let ownerName = owner["login"] as? String,
