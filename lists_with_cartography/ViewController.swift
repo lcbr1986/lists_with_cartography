@@ -43,8 +43,12 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GistTableViewCell
+        var gist = Gist()
+        gist.date = Date()
+        gist.description = "item \(indexPath.row)"
+        gist.ownerName = "Blabla"
         
-        cell.textLabel?.text = "item \(indexPath.row)"
+        cell.gist = gist
         
         return cell
     }
