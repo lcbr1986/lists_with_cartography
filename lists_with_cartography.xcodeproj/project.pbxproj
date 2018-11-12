@@ -11,6 +11,7 @@
 		0818DA4C21999A7300C8CD6F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818DA4B21999A7200C8CD6F /* Extensions.swift */; };
 		0818DA4E2199A5EF00C8CD6F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818DA4D2199A5EF00C8CD6F /* NetworkController.swift */; };
 		0818DA502199C23700C8CD6F /* GistFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818DA4F2199C23700C8CD6F /* GistFetcher.swift */; };
+		0818DA522199F08100C8CD6F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0818DA512199F08100C8CD6F /* DetailViewController.swift */; };
 		0893B0DA219761F20014E142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0893B0D9219761F20014E142 /* AppDelegate.swift */; };
 		0893B0DC219761F20014E142 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0893B0DB219761F20014E142 /* ViewController.swift */; };
 		0893B0E1219761F40014E142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0893B0E0219761F40014E142 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		0818DA4B21999A7200C8CD6F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0818DA4D2199A5EF00C8CD6F /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		0818DA4F2199C23700C8CD6F /* GistFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFetcher.swift; sourceTree = "<group>"; };
+		0818DA512199F08100C8CD6F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0893B0D6219761F20014E142 /* lists_with_cartography.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lists_with_cartography.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0893B0D9219761F20014E142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0893B0DB219761F20014E142 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			children = (
 				0893B0D9219761F20014E142 /* AppDelegate.swift */,
 				0893B0DB219761F20014E142 /* ViewController.swift */,
+				0818DA512199F08100C8CD6F /* DetailViewController.swift */,
 				0893B0E0219761F40014E142 /* Assets.xcassets */,
 				0893B0E2219761F40014E142 /* LaunchScreen.storyboard */,
 				0893B0E5219761F40014E142 /* Info.plist */,
@@ -230,6 +233,7 @@
 				0893B0DC219761F20014E142 /* ViewController.swift in Sources */,
 				0893B0EC219774590014E142 /* GistTableViewCell.swift in Sources */,
 				0893B0DA219761F20014E142 /* AppDelegate.swift in Sources */,
+				0818DA522199F08100C8CD6F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
